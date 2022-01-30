@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NGO</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="description"= content="this is an ngo" >
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  </head>
+  <body>
+
+   <div class="header">
+      <h2 class="logo">NGO (BY-SONAL SINHA)</h2>
+
+      <ul class="nav">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="sign-up.html">SIGN-UP</a></li>
+        <li><a href="services.html"> OUR SERVICES</a></li>
+        <li><a href="regist.html">REGISTRATION</a></li>
+        <li><a href="contact-us.html">Contact</a></li>
+
+
+      </ul>
+</div>
+<div class="about"><a href="home.html">
+      <h1>HOME</h1></a>
+</div>
+<div class="sign-up"><a href="sign-up.html">
+      <h1>SIGN-UP</h1></a>
+</div>
+<div class="services"><a href="services.html">
+      <h1>Our Services</h1></a>
+</div>
+<br>
+<div class="registration"><a href="regist.html">
+  <h1>REGISTRATION</h1></a>
+</div>
+
+<div class="contact"><a href="contact-us.html">
+      <h1>Contact Us</h1></a>
+</div>
+
+<div class="footer"><center>
+      <p>&copy; 2021 All Rights Reserved</p>
+</div></center>
+    </div>
+      
+  <script type="text\javascript">
+
+
+
+var firstName = "";
+		var lastName = "";
+		var email = "";
+		var dType = "";
+		var receipt = "";
+		var anon = "";
+		var list = "";
+		var amount = "";
+		
+		$('.set-amount').autoGrow(0);
+		
+		
+		//Set & Highlight Donation Amount
+		$(".button").click(function(){
+			$(".button").removeClass("selected");
+			$(this).addClass("selected");
+			
+			$(this).find("input").focus();
+		});
+		
+		//Grow the donation box if they type more than 4 numbers
+		$(".set-amount").keyup(function(){
+			
+			if (this.value != this.value.replace(/[^0-9\.]/g, '')) {
+		       this.value = this.value.replace(/[^0-9\.]/g, '');
+		    }
+
+		});
+		
+		
+		$("input").on("change", function(){
+			// $(".donation-box").css("height", "500px");
+			
+			firstName = $("#firstName").val();
+			lastName = $("#lastName").val();
+			email = $("#email").val();
+			
+			if ( $("#one-time").prop( "checked" ) ){
+				dType = "One-Time";
+			}
+			if ( $("#monthly").prop( "checked" ) ){
+				dType = "Monthly";
+			}
+
+		});
+  
+  </script>
+     
+         
+
+  </body>
+</html>
